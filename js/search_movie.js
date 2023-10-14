@@ -40,6 +40,7 @@ const row = document.getElementById("row");
 const pageNumber = document.getElementById("page_number");
 const nextBtn = document.getElementById("next");
 const preBtn = document.getElementById("pre");
+const scrollTopBtn = document.getElementById("scroll-top");
 let pageSearchMovies = 1;
 let totalPageSearchMovies;
 let noPoster = "img/noPoster.jpg";
@@ -155,4 +156,7 @@ preBtn.onclick = function () {
     findMovies();
     window.scrollTo(0, 0);
   }
+};
+scrollTopBtn.onclick = function () {
+  window.scrollTo(0, 0);
 };

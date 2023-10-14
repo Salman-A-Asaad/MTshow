@@ -30,6 +30,9 @@
   </head>
 
   <body class="bg-dark position-relative">
+    <div id="scroll-top" class="position-fixed">
+      <i class="bi bi-arrow-up-circle text-danger fs-3"></i>
+    </div>
     <!-- Head section -->
     <header class="h2 fw-bold text-center text-light p-2">
       <a class="text-reset text-decoration-none" href="index.html"
@@ -68,7 +71,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
+        <div class="modal-content bg-dark">
           <div class="modal-header">
             <h1
               class="modal-title fs-5 title-name-modal"
@@ -77,24 +80,24 @@
           </div>
           <div class="modal-body">
             <h5 class="text-capitalize text-danger">overview</h5>
-            <p id="overview" class="ps-3 text-dark"></p>
+            <p id="overview" class="ps-3 text-light"></p>
             <h5 class="text-capitalize text-danger">original language</h5>
-            <p id="original-lang" class="text-uppercase ps-3"></p>
+            <p id="original-lang" class="text-uppercase ps-3 text-light"></p>
             <h5 class="text-capitalize text-danger">popularity</h5>
-            <p id="popularity" class="ps-3"></p>
+            <p id="popularity" class="ps-3 text-light"></p>
             <h5 class="text-capitalize text-danger">release date</h5>
-            <p id="release-date" class="ps-3"></p>
+            <p id="release-date" class="ps-3 text-light"></p>
             <h5 class="text-capitalize text-danger">vote average</h5>
-            <p id="vote-avg" class="ps-3"></p>
+            <p id="vote-avg" class="ps-3 text-light"></p>
             <h5 class="text-capitalize text-danger">vote count</h5>
-            <p id="vote-count" class="ps-3"></p>
+            <p id="vote-count" class="ps-3 text-light"></p>
             <h5 class="text-capitalize text-danger">genre</h5>
-            <p id="genre" class="ps-3"></p>
+            <p id="genre" class="ps-3 text-light"></p>
           </div>
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-outline-danger"
               data-bs-dismiss="modal"
             >
               Close

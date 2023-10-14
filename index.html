@@ -55,8 +55,15 @@
             </ul>
             <form class="d-flex justify-content-end" role="search" method="get">
                 <input id="input-form" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <a href="search_movie.html" id="search-movie-btn" class="btn btn-outline-danger">Movie</a>
-                <a href="search_tv.html" id="search-tv-btn" class="btn btn-outline-danger ms-2">TV</a>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <a href="search_movie.html" id="search-movie-btn" class="dropdown-item btn btn-outline-danger">Movie</a>
+                        <a href="search_tv.html" id="search-tv-btn" class="dropdown-item btn btn-outline-danger ms-2">TV</a>
+                    </ul>
+                </div>
             </form>
         </div>
         </div>
