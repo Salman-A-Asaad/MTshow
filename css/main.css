@@ -1,108 +1,113 @@
 :root {
-    --red-color: #dc3545;
+  --red-color: #dc3545;
 }
 
 * {
-    font-family: "Alkatra", cursive;
-    font-family: "Changa", sans-serif;
-    font-family: "Exo 2", sans-serif;
-    font-family: "Kalam", cursive;
-    font-family: "Mooli", sans-serif;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Permanent Marker", cursive;
-    font-family: "Roboto", sans-serif;
-    font-family: "Dosis", sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  font-family: "Alkatra", cursive;
+  font-family: "Changa", sans-serif;
+  font-family: "Exo 2", sans-serif;
+  font-family: "Kalam", cursive;
+  font-family: "Mooli", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Permanent Marker", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Dosis", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 nav {
-    z-index: 100;
+  z-index: 100;
 }
 
 a.active-a {
-    color: var(--red-color);
+  color: var(--red-color);
+}
+
+.dropdown-menu {
+  top: 110% !important;
+  left: -177% !important;
 }
 
 .upcoming {
-    margin-top: 56px;
+  margin-top: 56px;
 }
 
 .slide {
-    width: fit-content;
-    text-align: center;
+  width: fit-content;
+  text-align: center;
 }
 
 .slide {
-    overflow: hidden;
-    user-select: none;
+  overflow: hidden;
+  user-select: none;
 }
 
 h6 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 30px;
 }
 
 .swiper-pagination {
-    bottom: -5px !important;
-    z-index: 50 !important;
+  bottom: -5px !important;
+  z-index: 50 !important;
 }
 
 .swiper-pagination-bullet {
-    background: white;
-    opacity: 1;
+  background: white;
+  opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: var(--red-color) !important;
+  background-color: var(--red-color) !important;
 }
 
 .date-release {
-    top: -100%;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background-color: #000000b0;
-    z-index: 5;
-    transition: all 0.5s;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: #000000b0;
+  z-index: 5;
+  transition: all 0.5s;
 }
 
 .slide:hover .date-release {
-    top: 0;
+  top: 0;
 }
 
 .single-line {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .arrow-next {
-    animation-name: move;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes move {
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(5px);
-    }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
 }
 
 .navbar-toggler:focus,
 .navbar-toggler-icon:focus {
-    border-color: var(--red-color);
-    box-shadow: 0 0 0 0.2rem rgba(167, 40, 51, 0.25);
+  border-color: var(--red-color);
+  box-shadow: 0 0 0 0.2rem rgba(167, 40, 51, 0.25);
 }
 
 .form-control:focus {
-    border-color: var(--red-color);
-    box-shadow: 0 0 0 0.2rem rgba(167, 40, 51, 0.25);
+  border-color: var(--red-color);
+  box-shadow: 0 0 0 0.2rem rgba(167, 40, 51, 0.25);
 }
