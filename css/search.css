@@ -1,37 +1,43 @@
 * {
-  font-family: "Alkatra", cursive;
-  font-family: "Changa", sans-serif;
-  font-family: "Exo 2", sans-serif;
-  font-family: "Kalam", cursive;
-  font-family: "Mooli", sans-serif;
-  font-family: "Open Sans", sans-serif;
-  font-family: "Permanent Marker", cursive;
-  font-family: "Roboto", sans-serif;
-  font-family: "Dosis", sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    font-family: "Alkatra", cursive;
+    font-family: "Changa", sans-serif;
+    font-family: "Exo 2", sans-serif;
+    font-family: "Kalam", cursive;
+    font-family: "Mooli", sans-serif;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Permanent Marker", cursive;
+    font-family: "Roboto", sans-serif;
+    font-family: "Dosis", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 header {
-  border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 .card-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #resultes-search {
-  min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 200px);
 }
 
 #scroll-top {
-  width: fit-content;
-  cursor: pointer;
-  user-select: none;
-  bottom: 10px;
-  right: 10px;
-  z-index: 50;
+    width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    bottom: 10px;
+    right: 10px;
+    z-index: 50;
+}
+
+.disable {
+    background: gray;
+    border: gray;
+    pointer-events: none;
 }

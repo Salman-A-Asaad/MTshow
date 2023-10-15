@@ -80,6 +80,31 @@ var swiper = new Swiper(".slider", {
         },
     },
 });
+swiperUpcoming.innerHTML = `<div class="d-flex justify-content-center align-items-center" style="width: 100% ; height:255px">
+<div class="spinner-border text-danger" role="status">
+  <span class="sr-only"></span>
+</div>
+</div>`;
+swiperMovieTop.innerHTML = `<div class="d-flex justify-content-center align-items-center" style="width: 100% ; height:255px">
+<div class="spinner-border text-danger" role="status">
+  <span class="sr-only"></span>
+</div>
+</div>`;
+swiperMovieTrend.innerHTML = `<div class="d-flex justify-content-center align-items-center" style="width: 100% ; height:255px">
+<div class="spinner-border text-danger" role="status">
+  <span class="sr-only"></span>
+</div>
+</div>`;
+swiperTvTop.innerHTML = `<div class="d-flex justify-content-center align-items-center" style="width: 100% ; height:255px">
+<div class="spinner-border text-danger" role="status">
+  <span class="sr-only"></span>
+</div>
+</div>`;
+swiperTvTrend.innerHTML = `<div class="d-flex justify-content-center align-items-center" style="width: 100% ; height:255px">
+<div class="spinner-border text-danger" role="status">
+  <span class="sr-only"></span>
+</div>
+</div>`;
 // Set the function
 function changeLinkOfList() {
     if (window.scrollY >= upcomingLink.offsetTop) {
@@ -239,6 +264,15 @@ topRatingTV();
 trendingWeekMovies();
 trendingWeekTV();
 // Events of page
+inputForm.onchange = function() {
+    if (inputForm.value != "") {
+        searchMovieBtn.style.pointerEvents = "all";
+        searchTvBtn.style.pointerEvents = "all";
+    } else {
+        searchMovieBtn.style.pointerEvents = "none";
+        searchTvBtn.style.pointerEvents = "none";
+    }
+};
 searchMovieBtn.onclick = function() {
     localStorage.setItem("searchM", inputForm.value);
     inputForm.value = "";
