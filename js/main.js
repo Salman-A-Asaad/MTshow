@@ -10,6 +10,7 @@ let links = document.querySelectorAll(".bar-links");
 let upcomingLink = document.getElementById("upcoming");
 let topLink = document.getElementById("top");
 let trendingLink = document.getElementById("trending");
+let contactUsLink = document.getElementById("contact");
 let aboutLink = document.getElementById("about");
 let searchMovieBtn = document.getElementById("search-movie-btn");
 let searchTvBtn = document.getElementById("search-tv-btn");
@@ -19,6 +20,7 @@ let swiperMovieTop = document.getElementById("swiper-movies-top");
 let swiperTvTop = document.getElementById("swiper-tv-top");
 let swiperMovieTrend = document.getElementById("swiper-movies-trend");
 let swiperTvTrend = document.getElementById("swiper-tv-trend");
+let submitBtn = document.getElementById("submit");
 document.getElementById("year").innerHTML = new Date().getFullYear();
 let pageTopRatedMovies = 1;
 let totalPageTopRatedMovies;
@@ -125,11 +127,17 @@ function changeLinkOfList() {
         });
         links[2].classList.add("active-a");
     }
-    if (window.scrollY >= aboutLink.offsetTop - 100) {
+    if (window.scrollY >= contactUsLink.offsetTop - 100) {
         links.forEach((ele) => {
             ele.classList.remove("active-a");
         });
         links[3].classList.add("active-a");
+    }
+    if (window.scrollY >= aboutLink.offsetTop - 100) {
+        links.forEach((ele) => {
+            ele.classList.remove("active-a");
+        });
+        links[4].classList.add("active-a");
     }
 }
 
@@ -280,6 +288,12 @@ searchMovieBtn.onclick = function() {
 searchTvBtn.onclick = function() {
     localStorage.setItem("searchT", inputForm.value);
     inputForm.value = "";
+};
+submitBtn.onsubmit = function() {
+    document.getElementById("first-name").value = "";
+    document.getElementById("last-name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
 };
 window.addEventListener("scroll", () => {
     changeLinkOfList();
