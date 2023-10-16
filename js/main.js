@@ -1,10 +1,11 @@
 // Set the variable
 const options = {
-    method: "GET",
-    headers: {
-        accept: "application/json",
-        Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MjQ5MGRkODMyODE0NGJkZGEwZTZjZGY0OGNlMGM3ZCIsInN1YiI6IjY1MTk4ZDI4OTY3Y2M3MzQyOTVjYjg0MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XqagYNfa4658pWHj331dsm3GH-PYlGV7Fm7X9pWSDEM",
-    },
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MjQ5MGRkODMyODE0NGJkZGEwZTZjZGY0OGNlMGM3ZCIsInN1YiI6IjY1MTk4ZDI4OTY3Y2M3MzQyOTVjYjg0MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XqagYNfa4658pWHj331dsm3GH-PYlGV7Fm7X9pWSDEM",
+  },
 };
 let links = document.querySelectorAll(".bar-links");
 let upcomingLink = document.getElementById("upcoming");
@@ -30,57 +31,57 @@ let pageTopRatedTV = 1;
 let totalPageTopRatedTV;
 const poster = "https://image.tmdb.org/t/p/w220_and_h330_face/";
 const genres = {
-    28: "Action",
-    12: "Adventure",
-    16: "Animation",
-    35: "Comedy",
-    80: "Crime",
-    99: "Documentary",
-    18: "Drama",
-    10751: "Family",
-    14: "Fantasy",
-    36: "History",
-    27: "Horror",
-    10402: "Music",
-    10749: "Romance",
-    878: "Science Fiction",
-    10770: "TV Movie",
-    53: "Thriller",
-    10752: "War",
-    37: "Western",
-    10759: "Action & Adventure",
-    10762: "Kids",
-    9648: "Mystery",
-    10763: "News",
-    10764: "Reality",
-    10765: "Sci-Fi & Fantasy",
-    10766: "Soap",
-    10767: "Talk",
-    10768: "War & Politics",
+  28: "Action",
+  12: "Adventure",
+  16: "Animation",
+  35: "Comedy",
+  80: "Crime",
+  99: "Documentary",
+  18: "Drama",
+  10751: "Family",
+  14: "Fantasy",
+  36: "History",
+  27: "Horror",
+  10402: "Music",
+  10749: "Romance",
+  878: "Science Fiction",
+  10770: "TV Movie",
+  53: "Thriller",
+  10752: "War",
+  37: "Western",
+  10759: "Action & Adventure",
+  10762: "Kids",
+  9648: "Mystery",
+  10763: "News",
+  10764: "Reality",
+  10765: "Sci-Fi & Fantasy",
+  10766: "Soap",
+  10767: "Talk",
+  10768: "War & Politics",
 };
 var swiper = new Swiper(".slider", {
-    pagination: {
-        el: ".swiper-pagination",
-        // dynamicBullets: true,
+  pagination: {
+    el: ".swiper-pagination",
+    // dynamicBullets: true,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 5,
     },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 5,
-        },
-        788: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-        },
-        992: {
-            slidesPerView: 3,
-            spaceBetween: 25,
-        },
-        1100: {
-            slidesPerView: 4,
-            spaceBetween: 25,
-        },
+    788: {
+      slidesPerView: 3,
+      spaceBetween: 10,
     },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 25,
+    },
+    1100: {
+      slidesPerView: 4,
+      spaceBetween: 25,
+    },
+  },
 });
 swiperUpcoming.innerHTML = `<div class="d-flex justify-content-center align-items-center" style="width: 100% ; height:255px">
 <div class="spinner-border text-danger" role="status">
@@ -109,161 +110,161 @@ swiperTvTrend.innerHTML = `<div class="d-flex justify-content-center align-items
 </div>`;
 // Set the function
 function changeLinkOfList() {
-    if (window.scrollY >= upcomingLink.offsetTop) {
-        links.forEach((ele) => {
-            ele.classList.remove("active-a");
-        });
-        links[0].classList.add("active-a");
-    }
-    if (window.scrollY >= topLink.offsetTop - 100) {
-        links.forEach((ele) => {
-            ele.classList.remove("active-a");
-        });
-        links[1].classList.add("active-a");
-    }
-    if (window.scrollY >= trendingLink.offsetTop - 100) {
-        links.forEach((ele) => {
-            ele.classList.remove("active-a");
-        });
-        links[2].classList.add("active-a");
-    }
-    if (window.scrollY >= contactUsLink.offsetTop - 100) {
-        links.forEach((ele) => {
-            ele.classList.remove("active-a");
-        });
-        links[3].classList.add("active-a");
-    }
-    if (window.scrollY >= aboutLink.offsetTop - 100) {
-        links.forEach((ele) => {
-            ele.classList.remove("active-a");
-        });
-        links[4].classList.add("active-a");
-    }
+  if (window.scrollY >= upcomingLink.offsetTop) {
+    links.forEach((ele) => {
+      ele.classList.remove("active-a");
+    });
+    links[0].classList.add("active-a");
+  }
+  if (window.scrollY >= topLink.offsetTop - 100) {
+    links.forEach((ele) => {
+      ele.classList.remove("active-a");
+    });
+    links[1].classList.add("active-a");
+  }
+  if (window.scrollY >= trendingLink.offsetTop - 100) {
+    links.forEach((ele) => {
+      ele.classList.remove("active-a");
+    });
+    links[2].classList.add("active-a");
+  }
+  if (window.scrollY >= contactUsLink.offsetTop - 100) {
+    links.forEach((ele) => {
+      ele.classList.remove("active-a");
+    });
+    links[3].classList.add("active-a");
+  }
+  if (window.scrollY >= aboutLink.offsetTop - 100) {
+    links.forEach((ele) => {
+      ele.classList.remove("active-a");
+    });
+    links[4].classList.add("active-a");
+  }
 }
 
 function upComingMovies() {
-    fetch(
-            `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1`,
-            options
-        )
-        .then((response) => response.json())
-        .then((response) => {
-            displayUpComingMovies(response.results);
-        })
-        .catch((err) => console.error(err));
+  fetch(
+    `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1`,
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      displayUpComingMovies(response.results);
+    })
+    .catch((err) => console.error(err));
 }
 
 function displayUpComingMovies(data) {
-    let item = ``;
-    data.forEach((element) => {
-        let { title, release_date, poster_path } = element;
-        item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
+  let item = ``;
+  data.forEach((element) => {
+    let { title, release_date, poster_path } = element;
+    item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
             <img class="rounded-2" src="${poster + poster_path}" alt="" />
             <h6 class="mt-2 fw-bold text-capitalize text-danger">${title}</h6>
             <p class="position-absolute date-release text-light fs-2 d-flex justify-content-center align-items-center fw-bold text-capitalize">
             ${release_date}</p>
                     </div>`;
-    });
-    swiperUpcoming.innerHTML = item;
+  });
+  swiperUpcoming.innerHTML = item;
 }
 
 function topRatingMovies() {
-    fetch(
-            `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${pageTopRatedMovies}`,
-            options
-        )
-        .then((response) => response.json())
-        .then((response) => {
-            topRatingMovies = response.total_pages;
-            displayTopRatingMovies(response.results);
-        })
-        .catch((err) => console.error(err));
+  fetch(
+    `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${pageTopRatedMovies}`,
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      topRatingMovies = response.total_pages;
+      displayTopRatingMovies(response.results);
+    })
+    .catch((err) => console.error(err));
 }
 
 function displayTopRatingMovies(data) {
-    let item = ``;
-    data.forEach((element) => {
-        let { title, release_date, poster_path } = element;
-        item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
+  let item = ``;
+  data.forEach((element) => {
+    let { title, release_date, poster_path } = element;
+    item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
             <img class="rounded-2" src="${poster + poster_path}" alt="" />
             <h6 class="mt-2 fw-bold text-capitalize text-danger">${title}</h6>
             <p class="position-absolute date-release text-light fs-2 d-flex justify-content-center align-items-center fw-bold text-capitalize">
             ${release_date}</p>
                     </div>`;
-    });
-    swiperMovieTop.innerHTML = item;
+  });
+  swiperMovieTop.innerHTML = item;
 }
 
 function topRatingTV() {
-    fetch(
-            `https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=${pageTopRatedTV}`,
-            options
-        )
-        .then((response) => response.json())
-        .then((response) => {
-            totalPageTopRatedTV = response.total_pages;
-            displayTopRatingTV(response.results);
-        })
-        .catch((err) => console.error(err));
+  fetch(
+    `https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=${pageTopRatedTV}`,
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      totalPageTopRatedTV = response.total_pages;
+      displayTopRatingTV(response.results);
+    })
+    .catch((err) => console.error(err));
 }
 
 function displayTopRatingTV(data) {
-    let item = ``;
-    data.forEach((element) => {
-        let { name, first_air_date, poster_path } = element;
-        item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
+  let item = ``;
+  data.forEach((element) => {
+    let { name, first_air_date, poster_path } = element;
+    item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
             <img class="rounded-2" src="${poster + poster_path}" alt="" />
             <h6 class="mt-2 fw-bold text-capitalize text-danger">${name}</h6>
             <p class="position-absolute date-release text-light fs-2 d-flex justify-content-center align-items-center fw-bold text-capitalize">
             ${first_air_date}</p>
                     </div>`;
-    });
-    swiperTvTop.innerHTML = item;
+  });
+  swiperTvTop.innerHTML = item;
 }
 
 function trendingWeekMovies() {
-    fetch(
-            "https://api.themoviedb.org/3/trending/movie/week?language=en-US",
-            options
-        )
-        .then((response) => response.json())
-        .then((response) => displaytTrendingWeekMovies(response.results))
-        .catch((err) => console.error(err));
+  fetch(
+    "https://api.themoviedb.org/3/trending/movie/week?language=en-US",
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => displaytTrendingWeekMovies(response.results))
+    .catch((err) => console.error(err));
 }
 
 function displaytTrendingWeekMovies(data) {
-    let item = ``;
-    data.forEach((element) => {
-        let { title, release_date, poster_path } = element;
-        item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
+  let item = ``;
+  data.forEach((element) => {
+    let { title, release_date, poster_path } = element;
+    item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
             <img class="rounded-2" src="${poster + poster_path}" alt="" />
             <h6 class="mt-2 fw-bold text-capitalize text-danger">${title}</h6>
             <p class="position-absolute date-release text-light fs-2 d-flex justify-content-center align-items-center fw-bold text-capitalize">
             ${release_date}</p>
                     </div>`;
-    });
-    swiperMovieTrend.innerHTML = item;
+  });
+  swiperMovieTrend.innerHTML = item;
 }
 
 function trendingWeekTV() {
-    fetch("https://api.themoviedb.org/3/trending/tv/week?language=en-U", options)
-        .then((response) => response.json())
-        .then((response) => displaytTrendingWeekTV(response.results))
-        .catch((err) => console.error(err));
+  fetch("https://api.themoviedb.org/3/trending/tv/week?language=en-U", options)
+    .then((response) => response.json())
+    .then((response) => displaytTrendingWeekTV(response.results))
+    .catch((err) => console.error(err));
 }
 
 function displaytTrendingWeekTV(data) {
-    let item = ``;
-    data.forEach((element) => {
-        let { name, first_air_date, poster_path } = element;
-        item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
+  let item = ``;
+  data.forEach((element) => {
+    let { name, first_air_date, poster_path } = element;
+    item += `<div class="swiper-slide slide p-2 rounded-2 position-relative">
             <img class="rounded-2" src="${poster + poster_path}" alt="" />
             <h6 class="mt-2 fw-bold text-capitalize text-danger">${name}</h6>
             <p class="position-absolute date-release text-light fs-2 d-flex justify-content-center align-items-center fw-bold text-capitalize">
             ${first_air_date}</p>
                     </div>`;
-    });
-    swiperTvTrend.innerHTML = item;
+  });
+  swiperTvTrend.innerHTML = item;
 }
 // Trigger the function
 upComingMovies();
@@ -272,29 +273,29 @@ topRatingTV();
 trendingWeekMovies();
 trendingWeekTV();
 // Events of page
-inputForm.onchange = function() {
-    if (inputForm.value != "") {
-        searchMovieBtn.style.pointerEvents = "all";
-        searchTvBtn.style.pointerEvents = "all";
-    } else {
-        searchMovieBtn.style.pointerEvents = "none";
-        searchTvBtn.style.pointerEvents = "none";
-    }
+inputForm.onchange = function () {
+  if (inputForm.value != "") {
+    searchMovieBtn.style.pointerEvents = "all";
+    searchTvBtn.style.pointerEvents = "all";
+  } else {
+    searchMovieBtn.style.pointerEvents = "none";
+    searchTvBtn.style.pointerEvents = "none";
+  }
 };
-searchMovieBtn.onclick = function() {
-    localStorage.setItem("searchM", inputForm.value);
-    inputForm.value = "";
+searchMovieBtn.onclick = function () {
+  localStorage.setItem("searchM", inputForm.value);
+  inputForm.value = "";
 };
-searchTvBtn.onclick = function() {
-    localStorage.setItem("searchT", inputForm.value);
-    inputForm.value = "";
+searchTvBtn.onclick = function () {
+  localStorage.setItem("searchT", inputForm.value);
+  inputForm.value = "";
 };
-submitBtn.onsubmit = function() {
-    document.getElementById("first-name").value = "";
-    document.getElementById("last-name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
+submitBtn.onclick = function () {
+  document.getElementById("first-name").value = "";
+  document.getElementById("last-name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
 };
 window.addEventListener("scroll", () => {
-    changeLinkOfList();
+  changeLinkOfList();
 });
